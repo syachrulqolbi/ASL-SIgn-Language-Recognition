@@ -24,7 +24,7 @@ def load_model():
         min_detection_confidence=0.5,
         min_tracking_confidence=0.5
     )
-
+    print(os.listdir())
     model = joblib.load("model.pkl")
 
     return model, mp_drawing, mp_drawing_styles, mp_hands, hands

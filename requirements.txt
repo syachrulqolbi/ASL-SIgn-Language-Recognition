@@ -4,6 +4,7 @@ joblib==1.2.0
 mediapipe==0.10.11
 numpy==1.23.5
 opencv-python-headless
+opencv-contrib-python-headless
 pandas==1.5.3
 Pillow==9.5.0
 streamlit==1.26.0

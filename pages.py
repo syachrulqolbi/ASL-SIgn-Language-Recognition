@@ -24,7 +24,7 @@ def load_model():
         min_detection_confidence=0.5,
         min_tracking_confidence=0.5
     )
-    print(os.listdir())
+    
     model = joblib.load("model.pkl")
 
     return model, mp_drawing, mp_drawing_styles, mp_hands, hands
@@ -94,6 +94,7 @@ def realtime():
             st.columns(1)[0].markdown("<h1 style='text-align: center; color: red;'>{}</h1>".format(value), unsafe_allow_html=True)  
     
     st.markdown("<h1 style='text-align: center; color: white; font-size: 20px;'>Fingerspelling Recognition</h1>", unsafe_allow_html=True)
+    print(os.listdir())
     model, mp_drawing, mp_drawing_styles, mp_hands, hands = load_model()
     result_queue: "queue.Queue[List[Detection]]" = queue.Queue()
 

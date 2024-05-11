@@ -94,7 +94,7 @@ def realtime():
             st.columns(1)[0].markdown("<h1 style='text-align: center; color: red;'>{}</h1>".format(value), unsafe_allow_html=True)  
     
     st.markdown("<h1 style='text-align: center; color: white; font-size: 20px;'>Fingerspelling Recognition</h1>", unsafe_allow_html=True)
-    print(os.listdir())
+    st.markdown("<h1 style='text-align: center; color: white; font-size: 20px;'>{}</h1>".format(os.listdir()), unsafe_allow_html=True)
     model, mp_drawing, mp_drawing_styles, mp_hands, hands = load_model()
     result_queue: "queue.Queue[List[Detection]]" = queue.Queue()
 
